@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum">
+    <title>Home</title>
+    <style>
+        body {
+            background-color: #201e1b;
+            color: rgb(255, 248, 242);
+        }
+
+        .background-home {
+            background-image: url("img_ChaewonPage/AE274399-4FE5-4314-B20A-C68594086494.jpeg");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .background-intro {
+            background-image: url("img_ChaewonPage/E64A7BDF-88B8-411E-9DCD-B74B8C0ABB28.jpeg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: top;
+            background-attachment: fixed;
+        }
+
+        .big {
+            margin-top: 15vw;
+            text-align: center;
+            font-size: 800%;
+        }
+
+        .info {
+            padding-left: 15%;
+            text-align: left;
+            font-size: 100%;
+            line-height: 200%;
+        }
+
+        .nav-container {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(0, 0, 0, 0.5);
+            list-style-type: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .ch {
+            margin: 1vw auto;
+            cursor: pointer;
+            font-size: 100%;
+            text-align: center;
+            text-decoration: none;
+            color: #9f7f51;
+        }
+
+        .nav-item {
+            margin: 1vw auto;
+            cursor: pointer;
+        }
+
+        .nav-item a {
+            font-size: 90%;
+            text-align: center;
+            text-decoration: none;
+            color: rgb(255, 248, 242);
+        }
+
+        .more {
+            list-style-type: none;
+            text-align: center;
+            color: rgb(255, 248, 242);
+        }
+
+        h1 {
+            padding-top: 280px;
+            font-size: 300%;
+            font-weight: normal;
+        }
+
+        h2 {
+            font-size: 100%;
+            font-weight: normal;
+            color: gray;
+            text-align: center;
+        }
+
+        .left-text {
+            margin-left: 15%;
+        }
+
+
+        .center-text {
+            text-align: center;
+        }
+
+        p {
+            font-size: 78%;
+        }
+
+        
+
+        h3 {
+            font-size: 100%;
+            font-weight: bold;
+        }
+
+        .line {
+            width: 0px;
+            height: 300px;
+            border: 1px solid gray;
+            display: inline-block;
+        }
+
+        .likebox {
+            width: 30%;
+            text-align: center;
+            display: inline-block;
+        }
+
+        .space {
+            height: 40vw;
+        }
+
+        @media screen and (max-width:767px) {
+            .big {
+                margin-top: 50vw;
+                text-align: center;
+                font-size: 500%;
+            }
+
+            .info {
+                text-align: center;
+                font-size: 100%;
+                line-height: 200%;
+            }
+
+            .space {
+                height: 100vw;
+            }
+            
+            .background-intro {
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: top;
+            background-attachment: fixed;
+            }
+
+            .left-text {
+            text-align: left;
+            }
+            
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+        $(document).ready(function (event) {
+            $(window).resize(function () {
+                $("#ch").on("click", function () {
+                $("#home").css("display", "block");
+                $("#introduce").css("display", "none");
+                $("#sns").css("display", "none");
+            });
+            $("#intro").on("click", function () {
+                $("#home").css("display", "none");
+                $("#introduce").css("display", "block");
+                $("#sns").css("display", "none");
+            });
+            $("#sn").on("click", function () {
+                $("#home").css("display", "none");
+                $("#introduce").css("display", "none");
+                $("#sns").css("display", "block");
+            });
+
+                if (window.innerWidth <= 767) {
+                    $(".surimg").css("width", "60vw");
+                    $(".snsimg").css("width", "60vw");
+                    $(".link").css("margin-top","5vw");
+                    $('h4').css('display', "none");
+                    $(".background-intro").css("background-image", 'url("img_ChaewonPage/AE274399-4FE5-4314-B20A-C68594086494.jpeg")');
+                }
+                else {
+                    $(".background-intro").css("background-image", 'url(img_ChaewonPage/E64A7BDF-88B8-411E-9DCD-B74B8C0ABB28.jpeg)');
+                    $(".surimg").css("width", "400px");
+                    $(".snsimg").css("width", "400px");
+                    $(".link").css("margin-top","100px");
+                }
+            }).resize();
+            
+        });
+    </script>
+</head>
+
+<body>
+    <nav>
+        <ul class="nav-container">
+            <li class='nav-item' id='ch'><a href='#home' style='color: #9f7f51;'>Chaewon Yoon</a></li>
+            <li class='nav-item introduce' id='intro'><a href='#introduce'>Introduce</a></li>
+            <li class='nav-item' id='sn'><a href='#sns'>SNS</a></li>
+        </ul>
+    </nav>
+    <div class="main">
+        <div id="home">
+            <div class="background-home">
+                <br>
+                <p class="big">Chaewon Yoon</p>
+                <div class="space"></div>
+                <span class="info">Name: Chaewon Yoon</span><br>
+                <span class="info">Gender: Woman</span><br>
+                <span class="info">Nationality: National Republic of Korea</span><br>
+                <div class="space"></div>
+            </div>
+            <div class="more">
+                <p style="color: #9f7f51;">Tecknology Stack</p>
+                <p>HTML</p>
+                <p>CSS</p>
+                <p>Jquery</p>
+                <p>JAVA</p>
+                <p>Pyhton</p>
+            </div>
+        </div>
+
+        <div id="introduce" style="display: none;">
+            <div class="background-intro">
+                <br>
+                <h1 class="left-text">윤&nbsp; 채&nbsp; 원</h1>
+                <h4 class="left-text" style="font-size:80%; color: #9f7f51;">
+                    C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    H&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    E&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; W&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    N&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    Y&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; N</h4>
+                <hr style="width:80%;">
+                <br>
+                <p class="left-text">강원대학교 컴퓨터공학과 재학 중</p>
+                <p class="left-text">반포초등학교 졸업</p>
+                <p class="left-text">진선여자중.고등학교 졸업</p>
+                <p class="left-text">mbti: ENFP</p>
+                <div class="space"></div>
+            </div>
+            <span style="line-height:120px;"><br></span>
+            <h2 class="center-text">P E R S O N A L I T Y</h2>
+            <span style="line-height:120px;"><br></span>
+            <div class='center-text' >
+                <div>
+                    <h3>잘 웃어요</h3>
+                    <p style="font-size:13px">별거 아닌거에도 웃음이 많다. 귀엽거나 엉뚱한 것, 재밌는걸 좋아한다.</p>
+                </div>
+                <div>
+                    <h3>사막에서도 잘 살아요</h3>
+                    <p style="font-size:13px">적응력이 좋아 어떠한 환경 속에서도 즐거움을 찾고 잘 녹아든다.</p>
+                </div>
+                <div>
+                    <h3>새로운 아이디어</h3>
+                    <p style="font-size:13px">대상을 보고 새로운 생각을 자주한다. 창의적인 아이디어 내는 것을 즐긴다.</p>
+                </div>
+            </div>
+            <div class="space"></div>
+            <span class="likebox" style="margin-left:20%;">
+                <h2 style="color:#8b7f52">L I K E</h2>
+                <br><br><br><br>
+                <p>내 자취방</p>
+                <p>심리학</p>
+                <p>귀여운것</p>
+                <p>새로운 아이디어 생각</p>
+                <p>말랑말랑</p>
+                <p>아따맘마</p>
+                <br>
+            </span>
+            <span class="line"></span>
+            <span class="likebox" style="margin-left:0;">
+                <h2 style="color:#8b7f52">D I S L I K E</h2>
+                <br><br><br><br>
+                <p>시간 압박</p>
+                <p>세세함</p>
+                <p>경쟁</p>
+                <p>단순암기</p>
+                <p>뒷담화</p>
+                <p>고등어 조림</p>
+                <br>
+            </span>
+        </div>
+
+        <div id="sns" style="display: none;">
+            <div class="surimg" style="width:400px; margin:0 auto; margin-top:100px;">
+                <img style="width:400px" class="snsimg" src="img_ChaewonPage/My_project-1_(2).png">
+            </div>
+            <h2 class="center-text">S&nbsp;&nbsp; N&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; L&nbsp;&nbsp; I&nbsp;&nbsp;
+                N&nbsp;&nbsp; K </h2>
+            <hr style="width:40%;">
+            <div class="link" style=" margin:0 auto; margin-top:5%; width:120px;">
+                <table>
+                    <td><a href="https://instagram.com/chxx_one?igshid=YmMyMTA2M2Y="><img  style="width:35px;"
+                                src="img_ChaewonPage/pngwing.com.png"></a></td>
+                    <td style="width:55px;"></td>
+                    <td><a href="http://qr.kakao.com/talk/G9QEmQSr1deOAPRhBbyNAq5qYgI-"><img style="width:40px;"
+                                src="img_ChaewonPage/pngwing.com_(2).png"></a></td>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div style="color: #9f7f51; text-align:center; margin-top:200px; margin-bottom:200px;">
+        <p style="font-size: 50%; ">@made by Chaewon Yoon</p>
+    </div>
+
+
+</body>
+
+</html>
